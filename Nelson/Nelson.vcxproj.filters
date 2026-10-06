@@ -27,9 +27,15 @@
     <ClInclude Include="src\Nelson\EntryPoint.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Nelson\Log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Nelson\Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Nelson\Log.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

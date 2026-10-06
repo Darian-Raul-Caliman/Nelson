@@ -1,0 +1,6 @@
+[submodule "Nelson/Nelson/vendor/spdlog"]
+	path = Nelson/Nelson/vendor/spdlog
+	url = https://github.com/gabime/spdlog
+[submodule "Nelson/vendor/spdlog"]
+	path = Nelson/vendor/spdlog
+	url = https://github.com/gabime/spdlog
