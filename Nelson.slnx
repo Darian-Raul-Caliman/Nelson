@@ -2,6 +2,6 @@
   <Configurations>
     <Platform Name="x64" />
   </Configurations>
-  <Project Path="Sandbox/Sandbox.vcxproj" Id="25e6fe7f-e9a5-4812-99d1-9d4057af5256" />
   <Project Path="Nelson/Nelson.vcxproj" Id="83355460-80f6-46b6-9fea-d40a1d76b940" />
+  <Project Path="Sandbox/Sandbox.vcxproj" Id="25e6fe7f-e9a5-4812-99d1-9d4057af5256" />
 </Solution>

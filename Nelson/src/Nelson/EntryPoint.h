@@ -6,8 +6,9 @@ extern Nelson::Application* Nelson::CreateApplication();
 
 int main(int argc, char** argv) {
 	Nelson::Log::Init();
-	Nelson::Log::GetCoreLogger()->warn("Initialized Log!");
-	Nelson::Log::GetClientLogger()->info("Hello Log!");
+	NS_CORE_WARN("Initialized Log!");
+	NS_INFO("Hello! This is Nelson Engine!");
+
 
 	auto app = Nelson::CreateApplication();
 	app->Run();
