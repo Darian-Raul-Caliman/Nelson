@@ -170,11 +170,14 @@
     <ClInclude Include="src\Nelson\Events\MouseEvents.h" />
     <ClInclude Include="src\Nelson\Log.h" />
     <ClInclude Include="src\Nelson\Nelson.h" />
+    <ClInclude Include="src\Nelson\Platform\Windows\WindowsWindow.h" />
+    <ClInclude Include="src\Nelson\Window.h" />
     <ClInclude Include="src\nspch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Nelson\Application.cpp" />
     <ClCompile Include="src\Nelson\Log.cpp" />
+    <ClCompile Include="src\Nelson\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\nspch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>

@@ -7,6 +7,12 @@
     <Filter Include="Nelson\Events">
       <UniqueIdentifier>{F8DE83D1-649F-FF07-2DDA-4885995944E4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Nelson\Platform">
+      <UniqueIdentifier>{6884155E-D40F-8322-DD20-0617492BDF22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Nelson\Platform\Windows">
+      <UniqueIdentifier>{A216F5A5-0E4E-3D3D-1758-A160830E6436}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Nelson\Application.h">
@@ -36,6 +42,12 @@
     <ClInclude Include="src\Nelson\Nelson.h">
       <Filter>Nelson</Filter>
     </ClInclude>
+    <ClInclude Include="src\Nelson\Platform\Windows\WindowsWindow.h">
+      <Filter>Nelson\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Nelson\Window.h">
+      <Filter>Nelson</Filter>
+    </ClInclude>
     <ClInclude Include="src\nspch.h" />
   </ItemGroup>
   <ItemGroup>
@@ -44,6 +56,9 @@
     </ClCompile>
     <ClCompile Include="src\Nelson\Log.cpp">
       <Filter>Nelson</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Nelson\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Nelson\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\nspch.cpp" />
   </ItemGroup>
