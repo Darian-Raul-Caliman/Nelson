@@ -1,6 +1,7 @@
+#include "nspch.h"
 #include "Log.h"
 #include "spdlog/sinks/stdout_color_sinks.h"
-// just for testing purpose
+
 namespace Nelson {
 
 	std::shared_ptr<spdlog::logger> Log::s_CoreLogger;

@@ -9,7 +9,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Nelson.h" />
     <ClInclude Include="src\Nelson\Application.h">
       <Filter>Nelson</Filter>
     </ClInclude>
@@ -34,6 +33,10 @@
     <ClInclude Include="src\Nelson\Log.h">
       <Filter>Nelson</Filter>
     </ClInclude>
+    <ClInclude Include="src\Nelson\Nelson.h">
+      <Filter>Nelson</Filter>
+    </ClInclude>
+    <ClInclude Include="src\nspch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Nelson\Application.cpp">
@@ -42,5 +45,6 @@
     <ClCompile Include="src\Nelson\Log.cpp">
       <Filter>Nelson</Filter>
     </ClCompile>
+    <ClCompile Include="src\nspch.cpp" />
   </ItemGroup>
 </Project>

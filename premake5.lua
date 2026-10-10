@@ -17,6 +17,8 @@ project "Nelson"
 
 	targetdir ("bin/" .. outputdir .. "/Sandbox")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+	pchheader "nspch.h"
+	pchsource "Nelson/src/nspch.cpp"
 
 	files {
 		"%{prj.name}/src/**.h",

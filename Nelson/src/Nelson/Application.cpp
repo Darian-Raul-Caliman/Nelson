@@ -1,3 +1,4 @@
+#include "nspch.h"
 #include "Application.h"
 #include  "Nelson/Events/Event.h"
 #include  "Nelson/Events/ApplicationEvent.h"
