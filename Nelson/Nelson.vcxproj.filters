@@ -4,6 +4,9 @@
     <Filter Include="Nelson">
       <UniqueIdentifier>{944132C5-80E3-5C9B-699E-70EF55DFE3EB}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Nelson\Events">
+      <UniqueIdentifier>{F8DE83D1-649F-FF07-2DDA-4885995944E4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Nelson.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\Nelson\EntryPoint.h">
       <Filter>Nelson</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Nelson\Events\ApplicationEvent.h">
+      <Filter>Nelson\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Nelson\Events\Event.h">
+      <Filter>Nelson\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Nelson\Events\KeyEvent.h">
+      <Filter>Nelson\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Nelson\Events\MouseEvents.h">
+      <Filter>Nelson\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Nelson\Log.h">
       <Filter>Nelson</Filter>
