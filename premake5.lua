@@ -10,6 +10,11 @@ workspace "Nelson"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+IncludeDir = {}
+IncludeDir["GLFW"] = "Nelson/vendor/GLFW/include"
+
+include "Nelson/vendor/GLFW"
+
 project "Nelson"
 	location "Nelson"
 	kind "SharedLib"
@@ -27,7 +32,13 @@ project "Nelson"
 
 	includedirs {
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"	
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links {
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"
@@ -43,8 +54,8 @@ project "Nelson"
 		}
 
 	postbuildcommands {
-			("xcopy /Q /E /Y /I \"%{cfg.buildtarget.relpath}\" \"..\\bin\\" .. outputdir .. "\\Sandbox\\\"")
-		}
+		("xcopy /Q /E /Y /I \"%{cfg.buildtarget.relpath}\" \"..\\bin\\" .. outputdir .. "\\Sandbox\\\"")
+	}
 
 	filter "configurations:Debug"
 		defines "NS_DEBUG"

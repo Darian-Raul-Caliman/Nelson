@@ -4,3 +4,6 @@
 [submodule "Nelson/vendor/spdlog"]
 	path = Nelson/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "Nelson/vendor/GLFW"]
+	path = Nelson/vendor/GLFW
+	url = https://github.com/TheCherno/glfw
