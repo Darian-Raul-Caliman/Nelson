@@ -2,8 +2,8 @@
 
 #include "Core.h"
 #include "Events/Event.h"
-#include "Nelson/Events/Event.h"   // or "../Nelson/Events/Event.h" depending on layout
 #include "Window.h"
+#include  "Nelson/Events/ApplicationEvent.h"
 
 namespace Nelson {
 
@@ -16,6 +16,7 @@ namespace Nelson {
 		void Run();
 
 	private:
+		bool OnWindowClose(WindowCloseEvent& e);
 		std::unique_ptr<Window> m_Window;
 		bool m_Running = true;
 	};

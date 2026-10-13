@@ -1,7 +1,7 @@
 #include "nspch.h"
 #include "Application.h"
-#include  "Nelson/Events/Event.h"
-#include  "Nelson/Events/ApplicationEvent.h"
+
+
 #include "Nelson/Log.h"
 
 #include <GLFW/glfw3.h>
@@ -20,7 +20,20 @@ namespace Nelson {
 	}
 
 	void Application::onEvent(Event& e) {
-		NS_CORE_INFO("{0}", e);
+
+		EventDispatcher dispatcher(e);
+		//NS_CORE_INFO("{0}", e); Logging events in the console
+		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(Application::OnWindowClose));
+
+		NS_CORE_TRACE("{0}", e);
+
+	}
+
+	bool Application::OnWindowClose(WindowCloseEvent& e) {
+
+		m_Running = false;
+		return true;
+
 	}
 
 	void Application::Run() {
