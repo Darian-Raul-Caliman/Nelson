@@ -12,7 +12,7 @@ namespace Nelson {
 	public:
 		Application();
 		virtual ~Application();
-
+		void onEvent(Event& e);
 		void Run();
 
 	private:
