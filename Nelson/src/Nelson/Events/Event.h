@@ -45,6 +45,9 @@ namespace Nelson {
 		{
 			return GetCategoryFlags() & category;
 		}
+
+		bool Handled() const { return m_Handled; }
+
 	protected:
 		bool m_Handled = false;
 	};
@@ -59,6 +62,10 @@ namespace Nelson {
 		{
 		}
 		template<typename T>
+
+
+
+
 		bool Dispatch(EventFn<T> func)
 		{
 			if (m_Event.GetEventType() == T::GetStaticType())
@@ -68,6 +75,8 @@ namespace Nelson {
 			}
 			return false;
 		}
+
+
 	private:
 		Event& m_Event;
 	};
@@ -75,6 +84,8 @@ namespace Nelson {
 	{
 		return os << e.ToString();
 	}
+
+
 }
 #define FMT_HEADER_ONLY
 #include <spdlog/fmt/bundled/format.h>

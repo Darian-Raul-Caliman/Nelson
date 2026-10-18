@@ -36,6 +36,12 @@
     <ClInclude Include="src\Nelson\Events\MouseEvents.h">
       <Filter>Nelson\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Nelson\Layer.h">
+      <Filter>Nelson</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Nelson\LayerStack.h">
+      <Filter>Nelson</Filter>
+    </ClInclude>
     <ClInclude Include="src\Nelson\Log.h">
       <Filter>Nelson</Filter>
     </ClInclude>
@@ -52,6 +58,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Nelson\Application.cpp">
+      <Filter>Nelson</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Nelson\Layer.cpp">
+      <Filter>Nelson</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Nelson\LayersStack.cpp">
       <Filter>Nelson</Filter>
     </ClCompile>
     <ClCompile Include="src\Nelson\Log.cpp">

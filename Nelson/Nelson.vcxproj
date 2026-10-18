@@ -84,7 +84,7 @@
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/utf-8 /MDd %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -113,7 +113,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/utf-8 /MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -143,7 +143,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/utf-8 /MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -168,6 +168,8 @@
     <ClInclude Include="src\Nelson\Events\Event.h" />
     <ClInclude Include="src\Nelson\Events\KeyEvent.h" />
     <ClInclude Include="src\Nelson\Events\MouseEvents.h" />
+    <ClInclude Include="src\Nelson\Layer.h" />
+    <ClInclude Include="src\Nelson\LayerStack.h" />
     <ClInclude Include="src\Nelson\Log.h" />
     <ClInclude Include="src\Nelson\Nelson.h" />
     <ClInclude Include="src\Nelson\Platform\Windows\WindowsWindow.h" />
@@ -176,6 +178,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Nelson\Application.cpp" />
+    <ClCompile Include="src\Nelson\Layer.cpp" />
+    <ClCompile Include="src\Nelson\LayersStack.cpp" />
     <ClCompile Include="src\Nelson\Log.cpp" />
     <ClCompile Include="src\Nelson\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\nspch.cpp">
