@@ -4,7 +4,7 @@
 
 #include "Nelson/Log.h"
 
-#include <GLFW/glfw3.h>
+#include <glad/GLAD.h>
 
 namespace Nelson {
 

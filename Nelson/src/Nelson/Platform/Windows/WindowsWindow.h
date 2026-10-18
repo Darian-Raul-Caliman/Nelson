@@ -1,6 +1,8 @@
 #pragma once
-#include <GLFW/glfw3.h>
+
 #include "Nelson/Window.h"
+
+#include <GLFW/glfw3.h>
 
 namespace Nelson {
 	class WindowsWindow : public Window {

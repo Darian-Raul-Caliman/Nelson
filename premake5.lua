@@ -12,8 +12,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 IncludeDir = {}
 IncludeDir["GLFW"] = "Nelson/vendor/GLFW/include"
+IncludeDir["Glad"] = "Nelson/vendor/Glad/include"
 
 include "Nelson/vendor/GLFW"
+include "Nelson/vendor/Glad"
 
 project "Nelson"
 	location "Nelson"
@@ -33,11 +35,13 @@ project "Nelson"
 	includedirs {
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 
 	links {
 		"GLFW",
+		"Glad",
 		"opengl32.lib"
 	}
 
@@ -50,7 +54,8 @@ project "Nelson"
 
 		defines {
 			"NS_PLATFORM_WINDOWS",
-			"NS_BUILD_DLL"
+			"NS_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 	postbuildcommands {
