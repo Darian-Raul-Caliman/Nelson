@@ -3836,9 +3836,9 @@ void ImGui::SetActiveID(ImGuiID id, ImGuiWindow* window)
     ImGuiContext& g = *GImGui;
 
 
-    for (int i = 0; i < DC.Layouts.Data.Size; i++)
+    for (int i = 0; i < window->DC.Layouts.Data.Size; i++)
     {
-        ImGuiLayout* layout = (ImGuiLayout*)DC.Layouts.Data[i].val_p;
+        ImGuiLayout* layout = (ImGuiLayout*)window->DC.Layouts.Data[i].val_p;
         IM_DELETE(layout);
     }
     // While most behaved code would make an effort to not steal active id during window move/drag operations,
