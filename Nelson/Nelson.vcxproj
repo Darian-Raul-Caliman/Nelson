@@ -80,7 +80,7 @@
       <PrecompiledHeaderFile>nspch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>NS_PLATFORM_WINDOWS;NS_BUILD_DLL;GLFW_INCLUDE_NONE;NS_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imGui\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -106,7 +106,7 @@
       <PrecompiledHeaderFile>nspch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>NS_PLATFORM_WINDOWS;NS_BUILD_DLL;GLFW_INCLUDE_NONE;NS_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imGui\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -136,7 +136,7 @@
       <PrecompiledHeaderFile>nspch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>NS_PLATFORM_WINDOWS;NS_BUILD_DLL;GLFW_INCLUDE_NONE;NS_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imGui\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -172,6 +172,7 @@
     <ClInclude Include="src\Nelson\LayerStack.h" />
     <ClInclude Include="src\Nelson\Log.h" />
     <ClInclude Include="src\Nelson\Nelson.h" />
+    <ClInclude Include="src\Nelson\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
     <ClInclude Include="src\Nelson\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Nelson\Window.h" />
     <ClInclude Include="src\nspch.h" />
@@ -181,6 +182,7 @@
     <ClCompile Include="src\Nelson\Layer.cpp" />
     <ClCompile Include="src\Nelson\LayersStack.cpp" />
     <ClCompile Include="src\Nelson\Log.cpp" />
+    <ClCompile Include="src\Nelson\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
     <ClCompile Include="src\Nelson\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\nspch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>

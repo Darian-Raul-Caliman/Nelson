@@ -10,6 +10,8 @@ namespace Nelson {
 
 		void OnUpdate();
 		void OnEvent(Event& event);
+		void OnAttach();
+		void OnDetach();
 	private:
 
 	};

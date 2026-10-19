@@ -10,6 +10,9 @@
     <Filter Include="Nelson\Platform">
       <UniqueIdentifier>{6884155E-D40F-8322-DD20-0617492BDF22}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Nelson\Platform\OpenGL">
+      <UniqueIdentifier>{9C2854E3-8822-7D35-718F-13465D28E3A1}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Nelson\Platform\Windows">
       <UniqueIdentifier>{A216F5A5-0E4E-3D3D-1758-A160830E6436}</UniqueIdentifier>
     </Filter>
@@ -48,6 +51,9 @@
     <ClInclude Include="src\Nelson\Nelson.h">
       <Filter>Nelson</Filter>
     </ClInclude>
+    <ClInclude Include="src\Nelson\Platform\OpenGL\ImGuiOpenGLRenderer.h">
+      <Filter>Nelson\Platform\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\Nelson\Platform\Windows\WindowsWindow.h">
       <Filter>Nelson\Platform\Windows</Filter>
     </ClInclude>
@@ -68,6 +74,9 @@
     </ClCompile>
     <ClCompile Include="src\Nelson\Log.cpp">
       <Filter>Nelson</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Nelson\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
+      <Filter>Nelson\Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Nelson\Platform\Windows\WindowsWindow.cpp">
       <Filter>Nelson\Platform\Windows</Filter>
