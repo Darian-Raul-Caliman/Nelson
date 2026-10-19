@@ -1,6 +1,7 @@
 workspace "Nelson"
 	architecture "x64"
 	toolset "v145"
+    startproject "Sandbox"
 
 	configurations {
 		"Debug",
@@ -13,9 +14,13 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 IncludeDir = {}
 IncludeDir["GLFW"] = "Nelson/vendor/GLFW/include"
 IncludeDir["Glad"] = "Nelson/vendor/Glad/include"
+IncludeDir["imGui"] = "Nelson/vendor/imGui/include"
+
 
 include "Nelson/vendor/GLFW"
 include "Nelson/vendor/Glad"
+include "Nelson/vendor/imGui"
+
 
 project "Nelson"
 	location "Nelson"
@@ -36,12 +41,14 @@ project "Nelson"
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
 		"%{IncludeDir.GLFW}",
-		"%{IncludeDir.Glad}"
+		"%{IncludeDir.Glad}",
+		"%{IncludeDir.imGui}"
 	}
 
 	links {
 		"GLFW",
 		"Glad",
+		"imGui",
 		"opengl32.lib"
 	}
 

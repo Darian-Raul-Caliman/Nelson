@@ -7,3 +7,6 @@
 [submodule "Nelson/vendor/GLFW"]
 	path = Nelson/vendor/GLFW
 	url = https://github.com/TheCherno/glfw
+[submodule "Nelson/vendor/imgui"]
+	path = Nelson/vendor/imgui
+	url = https://github.com/TheCherno/imgui
