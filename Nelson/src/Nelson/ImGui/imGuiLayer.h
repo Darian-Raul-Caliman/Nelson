@@ -2,6 +2,8 @@
 #include "Nelson/Layer.h"
 #include "Nelson/Events/KeyEvent.h"
 #include "Nelson/Events/MouseEvents.h"
+#include "Nelson/Events/ApplicationEvent.h"
+
 
 namespace Nelson {
 
@@ -16,14 +18,14 @@ namespace Nelson {
 		void OnDetach();
 
 	private:
-		void OnMouseButtonPressedEvent(MouseButtonPressedEvent& e);
-		void OnMouseButtonReleasedEvent(MouseButtonReleasedEvent& e);
-		void OnMouseScrollEvent(MouseScrolledEvent& e);
-		void OnMouseMovedEvent(MouseMovedEvent& e);
-		void OnKeyPressedEvent(KeyPressedEvent& e);
-		void OnKeyReleasedEvent(KeyReleasedEvent& e);
-		//void OnKeyTypedEvent(KeyTypedEvent& e);
-		void OnWindowResizedEvent(WindowResizeEvent& e);
+		bool OnMouseButtonPressedEvent(MouseButtonPressedEvent& e);
+		bool OnMouseButtonReleasedEvent(MouseButtonReleasedEvent& e);
+		bool OnMouseScrollEvent(MouseScrolledEvent& e);
+		bool OnMouseMovedEvent(MouseMovedEvent& e);
+		bool OnKeyPressedEvent(KeyPressedEvent& e);
+		bool OnKeyReleasedEvent(KeyReleasedEvent& e);
+		//bool OnKeyTypedEvent(KeyTypedEvent& e);
+		bool OnWindowResizedEvent(WindowResizeEvent& e);
 
 		float m_Time = 0.0f;
 	};
