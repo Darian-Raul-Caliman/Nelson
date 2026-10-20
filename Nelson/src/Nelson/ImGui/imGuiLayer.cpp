@@ -64,6 +64,7 @@ namespace Nelson {
 		dispatcher.Dispatch<MouseMovedEvent>(NS_BIND_EVENT_FN(ImGuiLayer::OnMouseMovedEvent));
 		dispatcher.Dispatch<MouseScrolledEvent>(NS_BIND_EVENT_FN(ImGuiLayer::OnMouseScrollEvent));
 		dispatcher.Dispatch<KeyPressedEvent>(NS_BIND_EVENT_FN(ImGuiLayer::OnKeyPressedEvent));
+		dispatcher.Dispatch<KeyTypedEvent>(NS_BIND_EVENT_FN(ImGuiLayer::OnKeyTypedEvent));
 		dispatcher.Dispatch<KeyReleasedEvent>(NS_BIND_EVENT_FN(ImGuiLayer::OnKeyReleasedEvent));
 		dispatcher.Dispatch<WindowResizeEvent>(NS_BIND_EVENT_FN(ImGuiLayer::OnWindowResizedEvent));
 	}
@@ -80,7 +81,7 @@ namespace Nelson {
 	{
 
 		ImGuiIO& io = ImGui::GetIO();
-		io.MouseDown[e.GetMouseButton()] = true;
+		io.MouseDown[e.GetMouseButton()] = false;
 		return false;
 
 	}
@@ -106,11 +107,33 @@ namespace Nelson {
 
 	bool ImGuiLayer::OnKeyPressedEvent(KeyPressedEvent& e)
 	{
+		ImGuiIO& io = ImGui::GetIO();
+		io.KeysDown[e.GetKeyCode()] = true;
+
+		io.KeyCtrl = io.KeysDown[GLFW_KEY_LEFT_CONTROL] || io.KeysDown[GLFW_KEY_RIGHT_CONTROL];
+		io.KeyShift = io.KeysDown[GLFW_KEY_LEFT_SHIFT] || io.KeysDown[GLFW_KEY_RIGHT_SHIFT];
+		io.KeyAlt = io.KeysDown[GLFW_KEY_LEFT_ALT] || io.KeysDown[GLFW_KEY_RIGHT_ALT];
+		io.KeySuper = io.KeysDown[GLFW_KEY_LEFT_SUPER] || io.KeysDown[GLFW_KEY_RIGHT_SUPER];
 		return false;
 	}
 
 	bool ImGuiLayer::OnKeyReleasedEvent(KeyReleasedEvent& e)
 	{
+		ImGuiIO& io = ImGui::GetIO();
+		io.KeysDown[e.GetKeyCode()] = false;
+		io.KeyCtrl = io.KeysDown[GLFW_KEY_LEFT_CONTROL] || io.KeysDown[GLFW_KEY_RIGHT_CONTROL];
+		io.KeyShift = io.KeysDown[GLFW_KEY_LEFT_SHIFT] || io.KeysDown[GLFW_KEY_RIGHT_SHIFT];
+		io.KeyAlt = io.KeysDown[GLFW_KEY_LEFT_ALT] || io.KeysDown[GLFW_KEY_RIGHT_ALT];
+		io.KeySuper = io.KeysDown[GLFW_KEY_LEFT_SUPER] || io.KeysDown[GLFW_KEY_RIGHT_SUPER];
+		return false;
+
+	}
+
+	bool ImGuiLayer::OnKeyTypedEvent(KeyTypedEvent& e) {
+		ImGuiIO& io = ImGui::GetIO();
+		int keycode = e.GetKeyCode();
+		if (keycode > 0 && keycode < 0x10000)
+			io.AddInputCharacter((unsigned short)keycode);
 		return false;
 	}
 

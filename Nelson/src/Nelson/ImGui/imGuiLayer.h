@@ -24,7 +24,7 @@ namespace Nelson {
 		bool OnMouseMovedEvent(MouseMovedEvent& e);
 		bool OnKeyPressedEvent(KeyPressedEvent& e);
 		bool OnKeyReleasedEvent(KeyReleasedEvent& e);
-		//bool OnKeyTypedEvent(KeyTypedEvent& e);
+		bool OnKeyTypedEvent(KeyTypedEvent& e);
 		bool OnWindowResizedEvent(WindowResizeEvent& e);
 
 		float m_Time = 0.0f;
