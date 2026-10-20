@@ -25,6 +25,7 @@ class Sandbox : public Nelson::Application {
 public:
 	Sandbox() {
 		PushLayer(new ExampleLayer());
+		PushOverlay(new Nelson::ImGuiLayer());
 	}
 	~Sandbox() {
 	}

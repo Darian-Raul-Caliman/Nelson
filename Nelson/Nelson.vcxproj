@@ -161,6 +161,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Nelson\ImGui\imGuiLayer.h" />
     <ClInclude Include="src\Nelson\Application.h" />
     <ClInclude Include="src\Nelson\Core.h" />
     <ClInclude Include="src\Nelson\EntryPoint.h" />
@@ -178,6 +179,7 @@
     <ClInclude Include="src\nspch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Nelson\ImGui\imGuiLayer.cpp" />
     <ClCompile Include="src\Nelson\Application.cpp" />
     <ClCompile Include="src\Nelson\Layer.cpp" />
     <ClCompile Include="src\Nelson\LayersStack.cpp" />

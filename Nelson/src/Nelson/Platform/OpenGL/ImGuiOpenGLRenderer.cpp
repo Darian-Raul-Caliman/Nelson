@@ -94,6 +94,8 @@
 #define _CRT_SECURE_NO_WARNINGS
 #endif
 
+#include "ImGuiOpenGLRenderer.h"
+#include "nspch.h"
 #include "imgui.h"
 #include "ImGuiOpenGLRenderer.h"
 #include <stdio.h>

@@ -3,7 +3,7 @@
 
 namespace Nelson {
 
-	class ImGuiLayer : public Layer {
+	class NS_API ImGuiLayer : public Layer {
 	public:
 		ImGuiLayer();
 		~ImGuiLayer();
@@ -12,7 +12,8 @@ namespace Nelson {
 		void OnEvent(Event& event);
 		void OnAttach();
 		void OnDetach();
-	private:
 
+	private:
+		float m_Time = 0.0f;
 	};
 }

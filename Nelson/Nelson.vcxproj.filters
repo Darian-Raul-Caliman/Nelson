@@ -61,6 +61,7 @@
       <Filter>Nelson</Filter>
     </ClInclude>
     <ClInclude Include="src\nspch.h" />
+    <ClInclude Include="src\Nelson\ImGui\imGuiLayer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Nelson\Application.cpp">
@@ -82,5 +83,6 @@
       <Filter>Nelson\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\nspch.cpp" />
+    <ClCompile Include="src\Nelson\ImGui\imGuiLayer.cpp" />
   </ItemGroup>
 </Project>
