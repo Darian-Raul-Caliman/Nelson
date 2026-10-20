@@ -1,5 +1,7 @@
 #pragma once
 #include "Nelson/Layer.h"
+#include "Nelson/Events/KeyEvent.h"
+#include "Nelson/Events/MouseEvents.h"
 
 namespace Nelson {
 
@@ -14,6 +16,15 @@ namespace Nelson {
 		void OnDetach();
 
 	private:
+		void OnMouseButtonPressedEvent(MouseButtonPressedEvent& e);
+		void OnMouseButtonReleasedEvent(MouseButtonReleasedEvent& e);
+		void OnMouseScrollEvent(MouseScrolledEvent& e);
+		void OnMouseMovedEvent(MouseMovedEvent& e);
+		void OnKeyPressedEvent(KeyPressedEvent& e);
+		void OnKeyReleasedEvent(KeyReleasedEvent& e);
+		//void OnKeyTypedEvent(KeyTypedEvent& e);
+		void OnWindowResizedEvent(WindowResizeEvent& e);
+
 		float m_Time = 0.0f;
 	};
 }
