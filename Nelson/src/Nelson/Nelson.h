@@ -5,7 +5,7 @@
 #include "Nelson/Application.h"
 #include "Nelson/Layer.h"
 #include "Nelson/Log.h"
-#include "Nelson/ImGui/ImGuiLayer.h"
+#include "Nelson/ImGui/imGuiLayer.h"
 // -- Entry point -----------------------------
 #include "Nelson/EntryPoint.h"
 //-----------------------------

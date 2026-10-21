@@ -2,6 +2,7 @@
 #include "imGuiLayer.h"
 #include <glad/glad.h>
 #include "imgui.h"
+#include "backends/imgui_impl_glfw.h"
 #include <GLFW/glfw3.h>
 #include "Nelson/Platform/OpenGL/ImGuiOpenGLRenderer.h"
 #include "Nelson/Application.h"

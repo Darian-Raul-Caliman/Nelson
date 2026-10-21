@@ -3,7 +3,6 @@
 #include "Nelson/Events/KeyEvent.h"
 #include "Nelson/Events/MouseEvents.h"
 #include "Nelson/Events/ApplicationEvent.h"
-#include "../vendor/imGui/backends/imgui_impl_glfw.h"
 
 namespace Nelson {
 

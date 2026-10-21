@@ -180,6 +180,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Nelson\Application.cpp" />
+    <ClCompile Include="src\Nelson\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="src\Nelson\ImGui\imGuiLayer.cpp" />
     <ClCompile Include="src\Nelson\Layer.cpp" />
     <ClCompile Include="src\Nelson\LayersStack.cpp" />
