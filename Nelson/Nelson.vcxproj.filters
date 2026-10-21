@@ -7,6 +7,9 @@
     <Filter Include="Nelson\Events">
       <UniqueIdentifier>{F8DE83D1-649F-FF07-2DDA-4885995944E4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Nelson\ImGui">
+      <UniqueIdentifier>{BE95D2DF-AAF8-6184-537E-9A3A3FC02D07}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Nelson\Platform">
       <UniqueIdentifier>{6884155E-D40F-8322-DD20-0617492BDF22}</UniqueIdentifier>
     </Filter>
@@ -39,6 +42,9 @@
     <ClInclude Include="src\Nelson\Events\MouseEvents.h">
       <Filter>Nelson\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Nelson\ImGui\imGuiLayer.h">
+      <Filter>Nelson\ImGui</Filter>
+    </ClInclude>
     <ClInclude Include="src\Nelson\Layer.h">
       <Filter>Nelson</Filter>
     </ClInclude>
@@ -61,11 +67,13 @@
       <Filter>Nelson</Filter>
     </ClInclude>
     <ClInclude Include="src\nspch.h" />
-    <ClInclude Include="src\Nelson\ImGui\imGuiLayer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Nelson\Application.cpp">
       <Filter>Nelson</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Nelson\ImGui\imGuiLayer.cpp">
+      <Filter>Nelson\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="src\Nelson\Layer.cpp">
       <Filter>Nelson</Filter>
@@ -83,6 +91,5 @@
       <Filter>Nelson\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\nspch.cpp" />
-    <ClCompile Include="src\Nelson\ImGui\imGuiLayer.cpp" />
   </ItemGroup>
 </Project>

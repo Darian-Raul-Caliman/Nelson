@@ -3,7 +3,7 @@
 #include "Nelson/Events/KeyEvent.h"
 #include "Nelson/Events/MouseEvents.h"
 #include "Nelson/Events/ApplicationEvent.h"
-
+#include "../vendor/imGui/backends/imgui_impl_glfw.h"
 
 namespace Nelson {
 
@@ -18,14 +18,7 @@ namespace Nelson {
 		void OnDetach();
 
 	private:
-		bool OnMouseButtonPressedEvent(MouseButtonPressedEvent& e);
-		bool OnMouseButtonReleasedEvent(MouseButtonReleasedEvent& e);
-		bool OnMouseScrollEvent(MouseScrolledEvent& e);
-		bool OnMouseMovedEvent(MouseMovedEvent& e);
-		bool OnKeyPressedEvent(KeyPressedEvent& e);
-		bool OnKeyReleasedEvent(KeyReleasedEvent& e);
-		bool OnKeyTypedEvent(KeyTypedEvent& e);
-		bool OnWindowResizedEvent(WindowResizeEvent& e);
+
 
 		float m_Time = 0.0f;
 	};
