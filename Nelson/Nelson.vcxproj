@@ -97,7 +97,7 @@
     <ProjectReference>
     </ProjectReference>
     <PostBuildEvent>
-      <Command>xcopy /Q /E /Y /I "../bin/Debug-windows-x86_64/Sandbox/Nelson.dll" "..\bin\Debug-windows-x86_64\Sandbox\"</Command>
+      <Command>{COPY} ../bin/Debug-windows-x86_64/Sandbox/Nelson.dll "../bin/Debug-windows-x86_64/Sandbox/"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -127,7 +127,7 @@
     <ProjectReference>
     </ProjectReference>
     <PostBuildEvent>
-      <Command>xcopy /Q /E /Y /I "../bin/Release-windows-x86_64/Sandbox/Nelson.dll" "..\bin\Release-windows-x86_64\Sandbox\"</Command>
+      <Command>{COPY} ../bin/Release-windows-x86_64/Sandbox/Nelson.dll "../bin/Release-windows-x86_64/Sandbox/"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
@@ -157,7 +157,7 @@
     <ProjectReference>
     </ProjectReference>
     <PostBuildEvent>
-      <Command>xcopy /Q /E /Y /I "../bin/Dist-windows-x86_64/Sandbox/Nelson.dll" "..\bin\Dist-windows-x86_64\Sandbox\"</Command>
+      <Command>{COPY} ../bin/Dist-windows-x86_64/Sandbox/Nelson.dll "../bin/Dist-windows-x86_64/Sandbox/"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>

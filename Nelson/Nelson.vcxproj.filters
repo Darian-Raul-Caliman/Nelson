@@ -72,6 +72,9 @@
     <ClCompile Include="src\Nelson\Application.cpp">
       <Filter>Nelson</Filter>
     </ClCompile>
+    <ClCompile Include="src\Nelson\ImGui\ImGuiBuild.cpp">
+      <Filter>Nelson\ImGui</Filter>
+    </ClCompile>
     <ClCompile Include="src\Nelson\ImGui\imGuiLayer.cpp">
       <Filter>Nelson\ImGui</Filter>
     </ClCompile>

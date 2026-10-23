@@ -1,7 +1,7 @@
 workspace "Nelson"
 	architecture "x64"
 	toolset "v145"
-    startproject "Sandbox"
+
 
 	configurations {
 		"Debug",
@@ -15,11 +15,12 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "Nelson/vendor/GLFW/include"
 IncludeDir["Glad"] = "Nelson/vendor/Glad/include"
 IncludeDir["imGui"] = "Nelson/vendor/imGui"
-
+	startproject "Sandbox"
 
 include "Nelson/vendor/GLFW"
 include "Nelson/vendor/Glad"
 include "Nelson/vendor/imGui"
+
 
 
 project "Nelson"
@@ -66,7 +67,7 @@ project "Nelson"
 		}
 
 	postbuildcommands {
-		("xcopy /Q /E /Y /I \"%{cfg.buildtarget.relpath}\" \"..\\bin\\" .. outputdir .. "\\Sandbox\\\"")
+		("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox/\"")
 	}
 
 	filter "configurations:Debug"
@@ -119,15 +120,15 @@ project "Sandbox"
 
 	filter "configurations:Debug"
 		defines "NS_DEBUG"
-		buildoptions "/MDd"
+		buildoptions "Debug"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "NS_RELEASE"
-		buildoptions "/MD"
+		buildoptions "Release"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "NS_DIST"
-		buildoptions "/MD"
+		buildoptions "Release"
 		optimize "On"
