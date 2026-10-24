@@ -45,6 +45,9 @@
     <ClInclude Include="src\Nelson\ImGui\imGuiLayer.h">
       <Filter>Nelson\ImGui</Filter>
     </ClInclude>
+    <ClInclude Include="src\Nelson\Input.h">
+      <Filter>Nelson</Filter>
+    </ClInclude>
     <ClInclude Include="src\Nelson\Layer.h">
       <Filter>Nelson</Filter>
     </ClInclude>
@@ -59,6 +62,9 @@
     </ClInclude>
     <ClInclude Include="src\Nelson\Platform\OpenGL\ImGuiOpenGLRenderer.h">
       <Filter>Nelson\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Nelson\Platform\Windows\WindowsInput.h">
+      <Filter>Nelson\Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\Nelson\Platform\Windows\WindowsWindow.h">
       <Filter>Nelson\Platform\Windows</Filter>
@@ -89,6 +95,9 @@
     </ClCompile>
     <ClCompile Include="src\Nelson\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
       <Filter>Nelson\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Nelson\Platform\Windows\WindowsInput.cpp">
+      <Filter>Nelson\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\Nelson\Platform\Windows\WindowsWindow.cpp">
       <Filter>Nelson\Platform\Windows</Filter>

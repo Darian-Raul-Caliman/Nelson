@@ -6,6 +6,8 @@
 
 #include <glad/GLAD.h>
 
+#include "Input.h"
+
 namespace Nelson {
 
 #define BIND_EVENT_FN(x) std::bind(&x, this, std::placeholders::_1)
@@ -73,7 +75,8 @@ namespace Nelson {
 
 			for (Layer* layer : m_LayerStack)
 				layer->OnUpdate();
-
+			auto x = Input::GetMouseX();
+			NS_CORE_TRACE("{0}", x);
 			m_Window->OnUpdate();
 		}
 	}

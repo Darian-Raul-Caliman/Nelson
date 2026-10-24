@@ -97,7 +97,7 @@
     <ProjectReference>
     </ProjectReference>
     <PostBuildEvent>
-      <Command>{COPY} ../bin/Debug-windows-x86_64/Sandbox/Nelson.dll "../bin/Debug-windows-x86_64/Sandbox/"</Command>
+      <Command>xcopy /Q /E /Y /I "../bin/Debug-windows-x86_64/Sandbox/Nelson.dll" "..\bin\Debug-windows-x86_64\Sandbox\"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -127,7 +127,7 @@
     <ProjectReference>
     </ProjectReference>
     <PostBuildEvent>
-      <Command>{COPY} ../bin/Release-windows-x86_64/Sandbox/Nelson.dll "../bin/Release-windows-x86_64/Sandbox/"</Command>
+      <Command>xcopy /Q /E /Y /I "../bin/Release-windows-x86_64/Sandbox/Nelson.dll" "..\bin\Release-windows-x86_64\Sandbox\"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
@@ -157,7 +157,7 @@
     <ProjectReference>
     </ProjectReference>
     <PostBuildEvent>
-      <Command>{COPY} ../bin/Dist-windows-x86_64/Sandbox/Nelson.dll "../bin/Dist-windows-x86_64/Sandbox/"</Command>
+      <Command>xcopy /Q /E /Y /I "../bin/Dist-windows-x86_64/Sandbox/Nelson.dll" "..\bin\Dist-windows-x86_64\Sandbox\"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -169,11 +169,13 @@
     <ClInclude Include="src\Nelson\Events\KeyEvent.h" />
     <ClInclude Include="src\Nelson\Events\MouseEvents.h" />
     <ClInclude Include="src\Nelson\ImGui\imGuiLayer.h" />
+    <ClInclude Include="src\Nelson\Input.h" />
     <ClInclude Include="src\Nelson\Layer.h" />
     <ClInclude Include="src\Nelson\LayerStack.h" />
     <ClInclude Include="src\Nelson\Log.h" />
     <ClInclude Include="src\Nelson\Nelson.h" />
     <ClInclude Include="src\Nelson\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
+    <ClInclude Include="src\Nelson\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Nelson\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Nelson\Window.h" />
     <ClInclude Include="src\nspch.h" />
@@ -186,6 +188,7 @@
     <ClCompile Include="src\Nelson\LayersStack.cpp" />
     <ClCompile Include="src\Nelson\Log.cpp" />
     <ClCompile Include="src\Nelson\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
+    <ClCompile Include="src\Nelson\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Nelson\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\nspch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
