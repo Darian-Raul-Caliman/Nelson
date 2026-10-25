@@ -44,7 +44,7 @@ namespace Nelson {
 		//NS_CORE_INFO("{0}", e); Logging events in the console
 		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(Application::OnWindowClose));
 
-		NS_CORE_TRACE("{0}", e);
+		//NS_CORE_TRACE("{0}", e);
 
 		for (auto it = m_LayerStack.end(); it != m_LayerStack.begin();)
 		{
@@ -75,8 +75,8 @@ namespace Nelson {
 
 			for (Layer* layer : m_LayerStack)
 				layer->OnUpdate();
-			auto x = Input::GetMouseX();
-			NS_CORE_TRACE("{0}", x);
+			//auto x = Input::GetMouseX();
+			//NS_CORE_TRACE("{0}", x);
 			m_Window->OnUpdate();
 		}
 	}

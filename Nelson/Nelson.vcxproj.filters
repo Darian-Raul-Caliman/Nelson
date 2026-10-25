@@ -73,6 +73,8 @@
       <Filter>Nelson</Filter>
     </ClInclude>
     <ClInclude Include="src\nspch.h" />
+    <ClInclude Include="src\Nelson\KeyCodes.h" />
+    <ClInclude Include="src\Nelson\MouseButtonCodes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Nelson\Application.cpp">
